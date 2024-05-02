@@ -15,7 +15,6 @@ const removeAllZerosToEnd = (array) => {
       nonZeroPointer++;
     }
   }
-  console.log(array);
   return array;
 };
 
