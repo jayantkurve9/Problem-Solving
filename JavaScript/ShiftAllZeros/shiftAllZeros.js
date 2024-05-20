@@ -6,16 +6,19 @@ Approach: Two Pointer (modifying original array)
 * Iterating over an array to check for non zero value, if found moving it to start indexes using nonZeroPointer and incrementing pointer by 1.
 * This way through swapping with zeros and nonZeros value all nonZero values shift at start and zeros at end.
 */
-const removeAllZerosToEnd = (array) => {
-  let nonZeroPointer = 0;
+const shiftAllZeros = (array) => {
+    let nonZeroPointer = 0;
 
-  for (let i in array) {
-    if (array[i] !== 0) {
-      [array[nonZeroPointer], array[i]] = [array[i], array[nonZeroPointer]];
-      nonZeroPointer++;
+    for (let i in array) {
+        if (array[i] !== 0) {
+            [array[nonZeroPointer], array[i]] = [
+                array[i],
+                array[nonZeroPointer],
+            ];
+            nonZeroPointer++;
+        }
     }
-  }
-  return array;
+    return array;
 };
 
 /*
@@ -23,7 +26,7 @@ Approach: Partitioning (without modifying original array)
 * Diving array into two parts elements with zeros and nonZeros and mering both arrays while returning keeping nonZeros array at first.
 * Iterating over an array to sort out zero and nonZero value based on condition.
 */
-// const removeAllZerosToEnd = (array) => {
+// const shiftAllZeros = (array) => {
 //   const nonZeros = [];
 //   const zeros = [];
 
@@ -38,4 +41,4 @@ Approach: Partitioning (without modifying original array)
 //   return nonZeros.concat(zeros);
 // };
 
-module.exports = removeAllZerosToEnd;
+module.exports = shiftAllZeros;
