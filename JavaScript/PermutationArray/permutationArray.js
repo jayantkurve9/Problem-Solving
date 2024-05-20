@@ -1,3 +1,11 @@
+/*
+Approach: Backtracking/Recursion
+* Iterating on array elements and collecting single element
+* Using array slice to pull remaingElements except the current element
+* Calling function again to find permutation pairs of remaining elements
+* Merging the permutation pairs of remainingElements with current element and adding it to result array
+* Returning result array, if array length is 1 then simply returning array inside another array.
+*/
 const permutationArray = (array) => {
     if (array.length === 1) return [array];
 
