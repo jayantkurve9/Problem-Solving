@@ -66,18 +66,18 @@ function App() {
             <h2 className="signal-title">Signal Module</h2>
             <div className="signal-body">
                 <div
-                    className={cn({
-                        "signal-shell bg-dr-red": flag.red,
+                    className={cn("signal-shell bg-lt-red", {
+                        "bg-dr-red": flag.red,
                     })}
                 />
                 <div
-                    className={cn({
-                        "signal-shell bg-dr-yellow": flag.yellow,
+                    className={cn("signal-shell bg-lt-yellow", {
+                        "bg-dr-yellow": flag.yellow,
                     })}
                 />
                 <div
-                    className={cn({
-                        "signal-shell bg-dr-green": flag.green,
+                    className={cn("signal-shell bg-lt-green", {
+                        "bg-dr-green": flag.green,
                     })}
                 />
             </div>
